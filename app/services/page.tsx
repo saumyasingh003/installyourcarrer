@@ -83,7 +83,7 @@ const SERVICES: Service[] = [
 export default function ServicesPage() {
   return (
     <main className="w-full bg-[#F7F4EC]">
-      <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-20 lg:px-10">
+      <div className="mx-auto max-w-[1440px] px-4 pt-8 pb-20 sm:px-6 lg:px-10">
         <h1 className="text-4xl font-extrabold tracking-tight text-[#111111]">
           Our <span className="text-[#C9A24D]">Services</span>
         </h1>
@@ -117,7 +117,7 @@ export default function ServicesPage() {
 
                 {/* Text card - overlaps the image edge */}
                 <div
-                  className={`relative z-10 mx-3 -mt-10 sm:mx-8 sm:-mt-20 lg:row-start-1 lg:mx-0 lg:mt-24 ${
+                  className={`relative z-10 mx-1 -mt-10 sm:mx-8 sm:-mt-20 lg:row-start-1 lg:mx-0 lg:mt-24 ${
                     flip ? "lg:col-span-6 lg:col-start-1" : "lg:col-span-6 lg:col-start-7"
                   }`}
                 >
@@ -132,7 +132,7 @@ export default function ServicesPage() {
                   </span>
 
                   <div
-                    className={`relative rounded-3xl border-t-[3px] border-[#C9A24D] bg-[#FFFFFF] p-6 shadow-xl sm:p-10 ${
+                    className={`relative rounded-3xl border-t-[3px] border-[#C9A24D] bg-[#FFFFFF] p-5 shadow-xl sm:p-10 ${
                       flip ? "lg:rounded-tl-none" : "lg:rounded-tr-none"
                     }`}
                   >

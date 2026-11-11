@@ -39,17 +39,17 @@ export default function CourseHero({ course }: { course: Course }) {
             {course.intro}
           </p>
 
-          <div className="mt-9 flex flex-wrap gap-3">
+          <div className="mt-9 flex gap-2.5 sm:gap-3">
             <a
               href="#programs"
-              className="group inline-flex items-center gap-2 rounded-full bg-[#111111] px-7 py-3.5 text-sm font-semibold text-[#F7F4EC] transition hover:bg-[#C9A24D] hover:text-[#111111]"
+              className="group inline-flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-[#111111] px-4 py-3.5 text-[13px] sm:flex-none sm:gap-2 sm:px-7 sm:text-sm font-semibold text-[#F7F4EC] transition hover:bg-[#C9A24D] hover:text-[#111111]"
             >
               Explore Courses
               <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5" />
             </a>
             <a
               href="#enquire"
-              className="group inline-flex items-center gap-2 rounded-full border border-[#C9A24D] px-7 py-3.5 text-sm font-semibold text-[#111111] transition hover:bg-[#C9A24D]"
+              className="group inline-flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-[#C9A24D] px-4 py-3.5 text-[13px] sm:flex-none sm:gap-2 sm:px-7 sm:text-sm font-semibold text-[#111111] transition hover:bg-[#C9A24D]"
             >
               Enquire Now
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />

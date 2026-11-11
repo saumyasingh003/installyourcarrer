@@ -25,7 +25,7 @@ export default function CourseFAQ({ course }: { course: Course }) {
         <ul className="border-t border-[#C9A24D]/30 lg:col-span-8">
           {course.faqs.slice(0, MAX_FAQS).map((item, i) => (
             <li key={item.q} className="border-b border-[#C9A24D]/30">
-              <details name="course-faq" className="group" open={i === 0}>
+              <details name="course-faq" className="group">
                 <summary className="flex cursor-pointer list-none items-center gap-4 py-6 sm:gap-5 [&::-webkit-details-marker]:hidden">
                   <span className="w-7 shrink-0 font-number text-sm font-bold text-[#C9A24D] lining-nums tabular-nums sm:w-8">
                     {String(i + 1).padStart(2, "0")}

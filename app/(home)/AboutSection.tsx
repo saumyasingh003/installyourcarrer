@@ -11,14 +11,16 @@ const STATS = [
 ];
 
 const imgFrame =
-  "relative overflow-hidden rounded-3xl shadow-lg ring-1 ring-[#C9A24D]/20";
+  "relative overflow-hidden rounded-lg lg:rounded-3xl lg:shadow-lg lg:ring-1 lg:ring-[#C9A24D]/20";
 
 export default function AboutSection() {
   return (
     <section className="w-full bg-[#FFFFFF]">
-      <div className="mx-auto grid max-w-[1440px] items-center gap-12 px-6 py-20 lg:grid-cols-[1.4fr_auto_1fr] lg:gap-14 lg:px-10">
+      {/* Phone/tablet: stacked · laptop: collage + text, stats below · large desktop: 3 columns */}
+      <div className="grid w-full items-center gap-12 px-6 pt-8 pb-16 sm:px-8 sm:pt-10 sm:pb-20 lg:grid-cols-2 lg:py-20 lg:gap-14 lg:px-12 xl:grid-cols-[1.4fr_auto_1fr] 2xl:gap-20 2xl:px-20 2xl:py-28">
         {/* Image collage */}
-        <div className="grid grid-cols-[1.1fr_1fr] gap-3">
+        {/* Phones/tablets: nearly full width (small side gap), slightly rounded corners */}
+        <div className="-mx-3 grid grid-cols-[1.1fr_1fr] gap-1.5 sm:-mx-4 lg:mx-0 lg:gap-3">
           <div className={`${imgFrame} aspect-[3/4.6]`}>
             <Image
               src="/about/graduate.jpg"
@@ -51,10 +53,10 @@ export default function AboutSection() {
         </div>
 
         {/* Stats column */}
-        <ul className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:grid-cols-1 lg:gap-16">
+        <ul className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:order-last lg:col-span-2 lg:border-t lg:border-[#C9A24D]/25 lg:pt-12 xl:order-none xl:col-span-1 xl:grid-cols-1 xl:gap-16 xl:border-0 xl:pt-0">
           {STATS.map((s) => (
             <li key={s.label} className="text-center">
-              <p className="font-number text-4xl leading-none font-bold text-[#C9A24D] lining-nums tabular-nums">
+              <p className="font-number text-4xl leading-none font-bold text-[#C9A24D] lining-nums tabular-nums 2xl:text-5xl">
                 {s.value}
               </p>
               <p className="mt-2 text-sm text-[#111111]/65">{s.label}</p>
@@ -64,11 +66,11 @@ export default function AboutSection() {
 
         {/* Text */}
         <div>
-          <h2 className="font-display text-5xl leading-none tracking-tight text-[#111111]">
+          <h2 className="font-display text-4xl leading-none tracking-tight text-[#111111] sm:text-5xl 2xl:text-6xl">
             About <span className="text-[#C9A24D] italic">Us</span>
           </h2>
 
-          <div className="mt-6 space-y-5 text-[16px] leading-relaxed text-[#111111]/75">
+          <div className="mt-6 space-y-5 text-[15px] leading-relaxed text-[#111111]/75 sm:text-[16px] 2xl:text-lg">
             <p>
               <strong className="text-[#111111]">InstallYourCareer</strong> is a Patna-based education
               consultancy helping students find the right path in{" "}

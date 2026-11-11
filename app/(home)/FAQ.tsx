@@ -28,7 +28,7 @@ const FAQS = [
 export default function FAQ() {
   return (
     <section className="w-full bg-[#F7F4EC]">
-      <div className="mx-auto grid max-w-[1440px] gap-10 px-6 pt-20 pb-16 sm:pt-28 sm:pb-20 lg:grid-cols-12 lg:gap-16 lg:px-10">
+      <div className="grid w-full gap-10 px-6 pt-20 pb-16 sm:px-8 sm:pt-28 sm:pb-20 lg:grid-cols-12 lg:gap-16 lg:px-12 2xl:px-20">
         {/* Heading column */}
         <div className="lg:col-span-4">
           <div className="lg:sticky lg:top-28">
@@ -54,7 +54,7 @@ export default function FAQ() {
           <ul className="border-t border-[#C9A24D]/30">
             {FAQS.map((item, i) => (
               <li key={item.q} className="border-b border-[#C9A24D]/30">
-                <details name="faq" className="group" open={i === 0}>
+                <details name="faq" className="group">
                   <summary className="flex cursor-pointer list-none items-center gap-4 py-6 sm:gap-5 sm:py-7 [&::-webkit-details-marker]:hidden">
                     <span className="w-7 shrink-0 font-number text-sm font-bold tracking-wider text-[#C9A24D] lining-nums tabular-nums sm:w-8 sm:text-base">
                       {String(i + 1).padStart(2, "0")}

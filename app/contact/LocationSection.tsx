@@ -7,9 +7,9 @@ export default function LocationSection() {
   const directionsHref = `https://www.google.com/maps/dir/?api=1&destination=${q}`;
 
   return (
-    <section className="mt-12 grid overflow-hidden rounded-2xl sm:mt-16 sm:rounded-3xl bg-[#111111] shadow-xl lg:grid-cols-[2fr_3fr]">
+    <section className="-mx-3 mt-12 grid overflow-hidden rounded-2xl sm:mx-0 sm:mt-16 sm:rounded-3xl bg-[#111111] shadow-xl lg:grid-cols-[2fr_3fr]">
       {/* Text panel */}
-      <div className="relative flex flex-col justify-center bg-gradient-to-br from-[#C9A24D]/15 via-transparent to-transparent p-6 sm:p-10 lg:p-12">
+      <div className="relative flex flex-col justify-center bg-gradient-to-br from-[#C9A24D]/15 via-transparent to-transparent px-4 py-7 sm:p-10 lg:p-12">
         <span className="text-[11px] font-semibold tracking-[0.25em] sm:text-xs sm:tracking-[0.3em] text-[#C9A24D]">OUR OFFICE</span>
 
         <h2 className="mt-4 font-nav text-[2rem] leading-[1.05] text-[#FFFFFF] sm:mt-6 sm:text-5xl">

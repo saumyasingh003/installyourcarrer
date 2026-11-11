@@ -100,16 +100,30 @@ export default function AboutPage() {
           </div>
 
           <p className="mt-7 text-sm font-semibold text-[#111111]">Streams we guide students in</p>
-          <ul className="mt-3 flex flex-wrap gap-2">
-            {STREAMS.map((s) => (
-              <li
-                key={s}
-                className="rounded-full border border-[#C9A24D]/35 bg-[#FFFFFF] px-3.5 py-1.5 text-sm text-[#111111]/80"
-              >
-                {s}
+          {/* Phones: 2-column tiles · larger screens: pill chips */}
+          <ul className="mt-4 grid grid-cols-2 gap-2 sm:mt-3 sm:flex sm:flex-wrap">
+            {STREAMS.map((s, i) => (
+              <li key={s}>
+                <Link
+                  href={`/courses/${s.toLowerCase()}`}
+                  className="group flex h-full items-center gap-2.5 rounded-xl border border-[#C9A24D]/30 bg-[#FFFFFF] px-3.5 py-3 text-[15px] text-[#111111] shadow-sm transition hover:border-[#C9A24D] hover:text-[#C9A24D] sm:rounded-full sm:px-3.5 sm:py-1.5 sm:text-sm sm:text-[#111111]/80 sm:shadow-none"
+                >
+                  <span className="w-5 shrink-0 font-number text-xs font-bold text-[#C9A24D] lining-nums tabular-nums sm:hidden">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  {s}
+                </Link>
               </li>
             ))}
-            <li className="rounded-full px-1 py-1.5 text-sm text-[#111111]/50">& more</li>
+            <li className="col-span-2 sm:col-span-1">
+              <Link
+                href="/courses"
+                className="flex items-center justify-center gap-1.5 rounded-xl border border-dashed border-[#C9A24D]/50 py-3 text-sm font-semibold text-[#C9A24D] transition hover:bg-[#C9A24D] hover:text-[#111111] sm:rounded-full sm:border-0 sm:px-1 sm:py-1.5 sm:font-normal sm:text-[#111111]/50 sm:hover:bg-transparent sm:hover:text-[#C9A24D]"
+              >
+                &amp; more courses
+                <ArrowRight className="size-4 sm:hidden" />
+              </Link>
+            </li>
           </ul>
         </div>
       </section>

@@ -125,7 +125,7 @@ export default function CourseEnquiryForm({ course, programs }: { course: string
   const loading = status.kind === "loading";
 
   return (
-    <div className="rounded-3xl bg-[#111111] p-6 shadow-xl sm:p-9">
+    <div className="-mx-3 rounded-2xl bg-[#111111] px-4 py-6 shadow-xl sm:mx-0 sm:rounded-3xl sm:p-9">
       <h3 className="font-display text-3xl text-[#FFFFFF] sm:text-4xl">
         Enquire about <em className="text-[#C9A24D]">{course}</em>
       </h3>

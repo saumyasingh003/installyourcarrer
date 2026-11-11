@@ -55,7 +55,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="rounded-3xl bg-[#111111] p-6 shadow-xl sm:p-8">
+    <div className="-mx-3 rounded-2xl bg-[#111111] px-4 py-6 shadow-xl sm:mx-0 sm:rounded-3xl sm:p-8">
       <h2 className="text-2xl font-extrabold tracking-tight text-[#FFFFFF] sm:text-3xl">
         Start Your <span className="text-[#C9A24D]">Admission</span> Enquiry
       </h2>

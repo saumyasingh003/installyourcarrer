@@ -23,8 +23,8 @@ function InfoCard({
   children: React.ReactNode;
 }) {
   return (
-    <div className="relative rounded-3xl border border-[#C9A24D]/25 border-t-[3px] border-t-[#C9A24D] bg-[#FFFFFF] p-6 shadow-sm transition-shadow hover:shadow-md sm:p-7">
-      <span className="absolute top-5 right-6 text-xs font-semibold tracking-[0.25em] text-[#C9A24D]">
+    <div className="relative -mx-3 rounded-2xl border border-[#C9A24D]/25 border-t-[3px] border-t-[#C9A24D] bg-[#FFFFFF] px-4 py-5 shadow-sm transition-shadow hover:shadow-md sm:mx-0 sm:rounded-3xl sm:p-7">
+      <span className="absolute top-4 right-4 text-xs sm:top-5 sm:right-6 font-semibold tracking-[0.25em] text-[#C9A24D]">
         {number}
       </span>
       <div className="flex items-center gap-3">
@@ -33,7 +33,7 @@ function InfoCard({
         </span>
         <h2 className="text-xl font-bold text-[#111111]">{title}</h2>
       </div>
-      <div className="mt-5 space-y-4 pl-1">{children}</div>
+      <div className="mt-4 space-y-3 pl-1 sm:mt-5 sm:space-y-4">{children}</div>
     </div>
   );
 }
@@ -62,7 +62,7 @@ export default function ContactPage() {
 
         <div className="mt-8 grid gap-8 lg:grid-cols-[2fr_3fr]">
           {/* Info cards */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             <InfoCard number="01" icon={Building2} title="Office">
               <Row icon={<MapPin className="size-4" />}>{CONTACT.address}</Row>
               <Row icon={<Clock className="size-4" />}>{CONTACT.hours}</Row>
@@ -104,7 +104,7 @@ export default function ContactPage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={label}
-                    className="flex size-12 items-center justify-center rounded-full border border-[#C9A24D]/40 text-[#C9A24D] transition hover:bg-[#C9A24D] hover:text-[#FFFFFF]"
+                    className="flex size-11 items-center justify-center rounded-full border border-[#C9A24D]/40 sm:size-12 text-[#C9A24D] transition hover:bg-[#C9A24D] hover:text-[#FFFFFF]"
                   >
                     <Icon className="size-6" />
                   </a>

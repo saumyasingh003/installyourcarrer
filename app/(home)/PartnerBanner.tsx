@@ -7,7 +7,7 @@ export default function PartnerBanner() {
       {/* soft gold glow */}
       <div className="pointer-events-none absolute -top-40 -left-40 size-[520px] rounded-full bg-[#C9A24D]/10 blur-3xl" />
 
-      <div className="relative mx-auto max-w-[1440px] px-6 pt-10 pb-20 lg:px-10 lg:pt-14 lg:pb-28">
+      <div className="relative w-full px-6 pt-10 pb-20 sm:px-8 lg:px-12 lg:pt-14 lg:pb-28 2xl:px-20">
         <div className="grid items-end gap-10 lg:grid-cols-[1fr_auto]">
           <h2 className="font-display text-[clamp(3rem,8vw,7.5rem)] leading-[0.92] tracking-tight text-[#111111] uppercase">
             Your Dreams
@@ -26,7 +26,7 @@ export default function PartnerBanner() {
           </p>
         </div>
 
-        <p className="mt-12 max-w-[960px] font-display text-[1.75rem] leading-[1.15] tracking-[-0.03em] text-[#111111] italic sm:text-[2rem] lg:text-[2.4rem]">
+        <p className="mt-10 max-w-[960px] font-display text-[1.3rem] leading-[1.3] tracking-[-0.02em] text-[#111111] italic sm:mt-12 sm:text-[1.75rem] sm:leading-[1.2] md:text-[2rem] lg:text-[2.4rem] lg:leading-[1.15] lg:tracking-[-0.03em] 2xl:max-w-[1200px] 2xl:text-[2.8rem]">
           We believe every successful career begins with the right educational foundation. Through
           university partnerships, expert guidance, and diverse academic opportunities, we help
           students take confident steps towards their future.
