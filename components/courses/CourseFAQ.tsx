@@ -7,7 +7,7 @@ export const MAX_FAQS = 5;
 
 export default function CourseFAQ({ course }: { course: Course }) {
   return (
-    <section aria-labelledby="faq-title" id="faq" className="scroll-mt-36 bg-[#F7F4EC]">
+    <section aria-labelledby="faq-title" id="faq" className="scroll-mt-40 bg-[#F7F4EC]">
       <div className="mx-auto grid max-w-[1440px] gap-10 px-6 py-20 sm:py-24 lg:grid-cols-12 lg:gap-16 lg:px-10">
         <div className="lg:col-span-4">
           <div className="lg:sticky lg:top-40">

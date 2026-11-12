@@ -8,7 +8,7 @@ export const paramedical: Course = {
   accentWords: 2,
   intro:
     "Discover allied health careers in laboratories, imaging, operation theatres and critical care - and get guidance on choosing the right programme and university.",
-  image: { src: "/courses/paramedical.jpg", alt: "Allied health professional working with diagnostic equipment" },
+  image: { src: "/courses/v2/paramedical.jpg", alt: "Radiology technician preparing a patient for a scan", position: "object-[40%_50%]" },
   seo: {
     title: "Paramedical Courses - BMLT, Radiology, OT Technology Admission Guidance",
     description:

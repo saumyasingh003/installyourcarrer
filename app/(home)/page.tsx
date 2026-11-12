@@ -2,13 +2,15 @@ import Image from "next/image";
 import PartnerBanner from "./PartnerBanner";
 import AboutSection from "./AboutSection";
 import FAQ from "./FAQ";
+import CoursesShowcase from "./CoursesShowcase";
 
 function HeroHeading({ className = "" }: { className?: string }) {
   return (
     <h1 className={`font-display uppercase leading-[0.95] tracking-tight text-white ${className}`}>
       <span className="block text-[clamp(1.75rem,4.2vw,3.75rem)]">
         NAAC A++
-        <br className="hidden md:block" /> Accredited
+        <br />
+        Accredited
       </span>
       <span className="mt-2 block text-[clamp(1.125rem,2.5vw,2.25rem)]">Channel Partner of</span>
       <span className="block text-[clamp(1.125rem,2.5vw,2.25rem)] text-[#C9A24D]">Top Private Universities</span>
@@ -57,6 +59,7 @@ export default function Home() {
 
       <PartnerBanner />
       <AboutSection />
+      <CoursesShowcase />
       <FAQ />
     </main>
   );

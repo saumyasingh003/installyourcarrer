@@ -29,17 +29,17 @@ export default function CourseHero({ course }: { course: Course }) {
         </ol>
       </nav>
 
-      <div className="relative mx-auto grid max-w-[1440px] items-center gap-10 px-6 pt-8 pb-16 sm:pb-20 lg:grid-cols-12 lg:gap-14 lg:px-10 lg:pb-24">
-        <div className="lg:col-span-6">
+      <div className="relative mx-auto grid max-w-[1440px] items-center gap-8 px-6 pt-4 pb-10 sm:gap-10 sm:pb-16 lg:grid-cols-12 lg:gap-14 lg:px-10 lg:pt-2 lg:pb-16">
+        <div className="order-2 lg:order-1 lg:col-span-7">
           <p className="text-xs font-bold tracking-[0.25em] text-[#C9A24D]">{course.category}</p>
           <h1 className="mt-3 font-display text-[clamp(3.25rem,8vw,7rem)] leading-[0.95] tracking-tight text-[#111111]">
             {course.name}
           </h1>
-          <p className="mt-6 max-w-xl text-[16px] leading-relaxed text-[#111111]/70 sm:text-lg">
+          <p className="mt-5 max-w-xl text-[16px] leading-relaxed text-[#111111]/70 sm:text-lg">
             {course.intro}
           </p>
 
-          <div className="mt-9 flex gap-2.5 sm:gap-3">
+          <div className="mt-8 flex gap-2.5 sm:gap-3">
             <a
               href="#programs"
               className="group inline-flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-full bg-[#111111] px-4 py-3.5 text-[13px] sm:flex-none sm:gap-2 sm:px-7 sm:text-sm font-semibold text-[#F7F4EC] transition hover:bg-[#C9A24D] hover:text-[#111111]"
@@ -58,15 +58,15 @@ export default function CourseHero({ course }: { course: Course }) {
         </div>
 
         {/* Asymmetric image with offset gold frame */}
-        <div className="relative lg:col-span-6">
-          <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-tl-[4rem] rounded-tr-lg rounded-br-[4rem] rounded-bl-lg border border-[#C9A24D]/60 sm:translate-x-5 sm:translate-y-5 sm:rounded-tl-[6rem] sm:rounded-br-[6rem]" />
-          <div className="relative aspect-[4/3] overflow-hidden rounded-tl-[4rem] rounded-tr-lg rounded-br-[4rem] rounded-bl-lg shadow-xl sm:rounded-tl-[6rem] sm:rounded-br-[6rem] lg:aspect-[5/4]">
+        <div className="relative order-1 mx-auto w-full max-w-xl lg:order-2 lg:col-span-5 lg:max-w-none">
+          <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-tl-[4rem] rounded-tr-lg rounded-br-[4rem] rounded-bl-lg border border-[#C9A24D]/60 sm:translate-x-5 sm:translate-y-5 sm:rounded-tl-[5rem] sm:rounded-br-[5rem]" />
+          <div className="relative aspect-[4/3] overflow-hidden rounded-tl-[4rem] rounded-tr-lg rounded-br-[4rem] rounded-bl-lg shadow-xl sm:rounded-tl-[5rem] sm:rounded-br-[5rem]">
             <Image
               src={course.image.src}
               alt={course.image.alt}
               fill
               preload
-              sizes="(min-width: 1024px) 48vw, 100vw"
+              sizes="(min-width: 1024px) 40vw, 100vw"
               className={`object-cover ${course.image.position ?? ""}`}
             />
           </div>

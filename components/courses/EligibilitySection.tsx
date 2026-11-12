@@ -1,19 +1,11 @@
-import { Award, BookOpen, ClipboardCheck, FileText, GraduationCap, Info, type LucideIcon } from "lucide-react";
+import { Info } from "lucide-react";
 import type { Course } from "@/types/course";
 import SectionHeading from "./SectionHeading";
 
-// Icon per eligibility label; anything else falls back to a generic one.
-const ICONS: Record<string, LucideIcon> = {
-  qualification: GraduationCap,
-  subjects: BookOpen,
-  "minimum marks": Award,
-  entrance: ClipboardCheck,
-};
-
 export default function EligibilitySection({ course }: { course: Course }) {
   return (
-    <section aria-labelledby="eligibility-title" id="eligibility" className="scroll-mt-36 bg-[#FFFFFF]">
-      <div className="mx-auto max-w-[1440px] px-6 pt-12 pb-20 sm:pt-14 sm:pb-24 lg:px-10">
+    <section aria-labelledby="eligibility-title" id="eligibility" className="scroll-mt-40 bg-[#FFFFFF]">
+      <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-10 sm:pt-10 sm:pb-24 lg:px-10">
         <SectionHeading
           id="eligibility-title"
           num="02"
@@ -29,15 +21,11 @@ export default function EligibilitySection({ course }: { course: Course }) {
               <h3 className="font-display text-3xl text-[#111111]">{group.title}</h3>
               <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {group.items.map((item) => {
-                  const Icon = ICONS[item.label.toLowerCase()] ?? FileText;
                   return (
                     <li
                       key={item.label}
-                      className="flex gap-4 rounded-2xl bg-[#F7F4EC] p-5 transition hover:-translate-y-0.5 hover:shadow-md"
+                      className="rounded-2xl bg-[#F7F4EC] p-5 transition hover:-translate-y-0.5 hover:shadow-md"
                     >
-                      <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-[#FFFFFF] text-[#C9A24D]">
-                        <Icon className="size-5" strokeWidth={1.75} />
-                      </span>
                       <div>
                         <p className="font-semibold text-[#111111]">{item.label}</p>
                         <p className="mt-1 text-sm leading-relaxed text-[#111111]/70">{item.text}</p>

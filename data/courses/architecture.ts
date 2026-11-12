@@ -8,7 +8,7 @@ export const architecture: Course = {
   accentWords: 2,
   intro:
     "Combine creativity, technology and social purpose. Explore architecture and planning programmes and get guidance on NATA, JEE Main Paper 2 and admissions.",
-  image: { src: "/courses/architecture.jpg", alt: "Architecture student working on a building model" },
+  image: { src: "/courses/v2/architecture.jpg", alt: "Architecture student building a detailed scale model under warm desk light", position: "object-[60%_50%]" },
   seo: {
     title: "Architecture Courses - B.Arch, B.Plan, M.Arch Admission Guidance",
     description:

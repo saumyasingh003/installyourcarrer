@@ -7,8 +7,8 @@ export default function EntranceExamSection({ course }: { course: Course }) {
   const exams = course.exams.flatMap((e) => (EXAMS[e.id] ? [{ ...EXAMS[e.id], who: e.who }] : []));
 
   return (
-    <section aria-labelledby="exams-title" id="exams" className="scroll-mt-36 bg-[#FFFFFF]">
-      <div className="mx-auto max-w-[1440px] px-6 pt-12 pb-20 sm:pt-14 sm:pb-24 lg:px-10">
+    <section aria-labelledby="exams-title" id="exams" className="scroll-mt-40 bg-[#FFFFFF]">
+      <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-10 sm:pt-10 sm:pb-24 lg:px-10">
         <SectionHeading
           id="exams-title"
           num="03"

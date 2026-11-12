@@ -21,6 +21,17 @@ export default function FloatingButtons() {
 
   return (
     <div className="fixed right-4 bottom-4 z-50 flex flex-col items-center gap-3 sm:right-5 sm:bottom-5 sm:gap-4">
+      <button
+        type="button"
+        aria-label="Back to top"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className={`${baseBtn} bg-[#111111]/85 text-[#F7F4EC] hover:bg-[#111111] hover:text-[#C9A24D] ${
+          showTop ? "opacity-100" : "pointer-events-none -translate-y-4 opacity-0"
+        }`}
+      >
+        <ArrowUp className="size-5 sm:size-6" strokeWidth={3} />
+      </button>
+
       <a
         href={`https://wa.me/${CONTACT.whatsapp}`}
         target="_blank"
@@ -39,16 +50,6 @@ export default function FloatingButtons() {
         <Phone className="size-5 sm:size-6" fill="currentColor" strokeWidth={0} />
       </a>
 
-      <button
-        type="button"
-        aria-label="Back to top"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className={`${baseBtn} bg-[#111111]/85 text-[#F7F4EC] hover:bg-[#111111] hover:text-[#C9A24D] ${
-          showTop ? "opacity-100" : "pointer-events-none translate-y-4 opacity-0"
-        }`}
-      >
-        <ArrowUp className="size-5 sm:size-6" strokeWidth={3} />
-      </button>
     </div>
   );
 }

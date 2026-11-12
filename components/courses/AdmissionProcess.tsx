@@ -11,7 +11,7 @@ const STEPS = [
 
 export default function AdmissionProcess() {
   return (
-    <section aria-labelledby="process-title" id="process" className="scroll-mt-36 bg-[#111111]">
+    <section aria-labelledby="process-title" id="process" className="scroll-mt-40 bg-[#111111]">
       <div className="mx-auto max-w-[1440px] px-6 py-20 sm:py-24 lg:px-10">
         <SectionHeading id="process-title" num="08" label="ADMISSION PROCESS" title="Your journey," accent="step by step" dark />
 

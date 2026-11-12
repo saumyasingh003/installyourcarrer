@@ -8,7 +8,7 @@ export const law: Course = {
   accentWords: 2,
   intro:
     "Explore integrated and three-year law degrees, understand entrance exams like CLAT, and get guidance on choosing the right law school for your goals.",
-  image: { src: "/courses/law.jpg", alt: "Law books and a gavel on a desk" },
+  image: { src: "/courses/v2/law.jpg", alt: "Two young South Asian women lawyers with case files in a courtroom" },
   seo: {
     title: "Law Courses - BA LLB, BBA LLB, LLB, LLM Admission Guidance",
     description:

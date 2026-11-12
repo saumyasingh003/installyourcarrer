@@ -8,7 +8,7 @@ export const animation: Course = {
   accentWords: 2,
   intro:
     "Turn stories and ideas into film, games and visual effects. Explore animation, VFX and game design programmes with guidance on portfolios and admissions.",
-  image: { src: "/courses/animation.jpg", alt: "Animation student working on a digital drawing" },
+  image: { src: "/courses/v2/animation-3d.jpg", alt: "Animated 3D cartoon character being built in animation software on a laptop" },
   seo: {
     title: "Animation Courses - B.Sc Animation & VFX, B.Des, Game Design Admission",
     description:

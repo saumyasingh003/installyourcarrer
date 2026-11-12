@@ -8,7 +8,7 @@ export const agriculture: Course = {
   accentWords: 1,
   intro:
     "Science, technology and sustainability meet in agriculture. Explore agriculture and allied programmes and get guidance on CUET, state tests and admissions.",
-  image: { src: "/courses/agriculture.jpg", alt: "Agriculture student in a green crop field" },
+  image: { src: "/courses/v2/agriculture.jpg", alt: "Young agronomist checking crops with a tablet in a green field", position: "object-[60%_50%]" },
   seo: {
     title: "Agriculture Courses - B.Sc Agriculture, Horticulture, Agri Engineering",
     description:

@@ -15,6 +15,8 @@ type Service = {
   points: string[];
   image: string;
   alt: string;
+  /** Optional object-position class to keep the subject in frame. */
+  position?: string;
 };
 
 const SERVICES: Service[] = [
@@ -63,8 +65,9 @@ const SERVICES: Service[] = [
       "Form filling and important date reminders",
       "Preparation tips and cut-off insights",
     ],
-    image: "/services/exams.jpg",
-    alt: "Student writing notes at a desk",
+    image: "/services/exam-student.jpg",
+    alt: "Focused student writing an exam in a sunlit classroom",
+    position: "object-[60%_42%]",
   },
   {
     title: "Scholarships & Education Loans",
@@ -83,15 +86,15 @@ const SERVICES: Service[] = [
 export default function ServicesPage() {
   return (
     <main className="w-full bg-[#F7F4EC]">
-      <div className="mx-auto max-w-[1440px] px-4 pt-8 pb-20 sm:px-6 lg:px-10">
-        <h1 className="text-4xl font-extrabold tracking-tight text-[#111111]">
+      <div className="mx-auto max-w-[1440px] px-4 pt-6 pb-20 sm:px-6 sm:pt-8 lg:px-10">
+        <h1 className="text-[2rem] font-extrabold tracking-tight text-[#111111] sm:text-4xl">
           Our <span className="text-[#C9A24D]">Services</span>
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-[#111111]/70">
+        <p className="mt-3 max-w-2xl text-[15px] text-[#111111]/70 sm:mt-4 sm:text-lg">
           Everything you need to choose, apply and get admitted - in one place.
         </p>
 
-        <div className="mt-10 space-y-16 sm:mt-16 sm:space-y-24 lg:space-y-52">
+        <div className="mt-7 space-y-16 sm:mt-16 sm:space-y-24 lg:space-y-52">
           {SERVICES.map((s, i) => {
             const flip = i % 2 === 1;
             const num = String(i + 1).padStart(2, "0");
@@ -110,7 +113,7 @@ export default function ServicesPage() {
                     alt={s.alt}
                     fill
                     sizes="(min-width: 1024px) 60vw, 100vw"
-                    className="object-cover transition-transform duration-700 hover:scale-105"
+                    className={`object-cover transition-transform duration-700 hover:scale-105 ${s.position ?? ""}`}
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#111111]/25 to-transparent" />
                 </div>
@@ -139,20 +142,20 @@ export default function ServicesPage() {
                     {/* Number (mobile/tablet) - inside the card */}
                     <span
                       aria-hidden="true"
-                      className="mb-3 block font-number text-4xl leading-none font-bold lining-nums text-[#C9A24D]/50 sm:text-5xl lg:hidden"
+                      className="mb-2 block font-number text-3xl leading-none font-bold lining-nums text-[#C9A24D]/50 sm:text-5xl lg:hidden"
                     >
                       {num}
                     </span>
 
-                    <h2 className="font-display text-[2rem] leading-none tracking-tight text-[#111111] sm:text-5xl lg:text-[2.75rem] xl:text-5xl">
+                    <h2 className="font-display text-[1.75rem] leading-none tracking-tight text-[#111111] sm:text-5xl lg:text-[2.75rem] xl:text-5xl">
                       {s.title}
                     </h2>
 
-                    <p className="mt-5 text-[16px] leading-relaxed text-[#111111]/70">{s.description}</p>
+                    <p className="mt-4 text-[14.5px] leading-relaxed text-[#111111]/70 sm:mt-5 sm:text-[16px]">{s.description}</p>
 
-                    <ul className="mt-5 space-y-2.5">
+                    <ul className="mt-4 space-y-2 sm:mt-5 sm:space-y-2.5">
                       {s.points.map((p) => (
-                        <li key={p} className="flex items-start gap-3 text-[15px] text-[#111111]/75">
+                        <li key={p} className="flex items-start gap-3 text-sm text-[#111111]/75 sm:text-[15px]">
                           <span className="mt-2 size-1.5 shrink-0 rounded-full bg-[#C9A24D]" />
                           {p}
                         </li>
@@ -161,7 +164,7 @@ export default function ServicesPage() {
 
                     <Link
                       href="/contact"
-                      className="group mt-7 inline-flex items-center gap-2 rounded-full bg-[#111111] px-7 py-3 text-sm font-semibold text-[#F7F4EC] transition hover:bg-[#C9A24D] hover:text-[#111111]"
+                      className="group mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-[#111111] px-7 py-3 text-sm font-semibold text-[#F7F4EC] sm:mt-7 sm:inline-flex sm:w-auto transition hover:bg-[#C9A24D] hover:text-[#111111]"
                     >
                       Enquire Now
                       <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />

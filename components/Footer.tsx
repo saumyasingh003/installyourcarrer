@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { CONTACT } from "@/app/contact/contact-info";
@@ -30,9 +31,12 @@ export default function Footer() {
       <div className="mx-auto grid max-w-[1440px] grid-cols-2 gap-x-6 gap-y-10 px-6 py-10 sm:gap-x-10 sm:py-14 lg:grid-cols-[1.4fr_1fr_1fr_1.4fr] lg:px-10">
         {/* Brand */}
         <div className="col-span-2 lg:col-span-1">
-          <Link href="/" className="text-xl font-extrabold tracking-tight sm:text-2xl">
-            <span className="text-[#FFFFFF]">InstallYour</span>
-            <span className="text-[#C9A24D]">Career</span>
+          <Link href="/" className="inline-flex items-center gap-3 text-xl font-extrabold tracking-tight sm:text-2xl">
+            <Image src="/logo-mark.png" alt="" width={400} height={374} className="h-12 w-auto sm:h-14" />
+            <span>
+              <span className="text-[#FFFFFF]">InstallYour</span>
+              <span className="text-[#C9A24D]">Career</span>
+            </span>
           </Link>
           <p className="mt-3 max-w-sm leading-relaxed text-[#F7F4EC]/65 sm:mt-4">
             Helping students find the right course and college with honest, personal career

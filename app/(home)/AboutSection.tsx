@@ -33,11 +33,11 @@ export default function AboutSection() {
           <div className="flex flex-col gap-3">
             <div className={`${imgFrame} flex-[3]`}>
               <Image
-                src="/about/friend.jpg"
-                alt="Graduates throwing their caps in the air"
+                src="/about/students-campus.jpg"
+                alt="Students laughing together as they walk across campus"
                 fill
                 sizes="(min-width: 1024px) 24vw, 45vw"
-                className="object-cover"
+                className="object-cover object-[40%_40%]"
               />
             </div>
             <div className={`${imgFrame} flex-[2]`}>
@@ -53,13 +53,13 @@ export default function AboutSection() {
         </div>
 
         {/* Stats column */}
-        <ul className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:order-last lg:col-span-2 lg:border-t lg:border-[#C9A24D]/25 lg:pt-12 xl:order-none xl:col-span-1 xl:grid-cols-1 xl:gap-16 xl:border-0 xl:pt-0">
+        <ul className="-mx-3 grid grid-cols-2 gap-x-4 gap-y-6 rounded-2xl bg-[#F7F4EC] px-4 py-6 sm:mx-0 sm:grid-cols-4 sm:gap-8 sm:bg-transparent sm:p-0 lg:order-last lg:col-span-2 lg:border-t lg:border-[#C9A24D]/25 lg:pt-12 xl:order-none xl:col-span-1 xl:grid-cols-1 xl:gap-16 xl:border-0 xl:pt-0">
           {STATS.map((s) => (
             <li key={s.label} className="text-center">
-              <p className="font-number text-4xl leading-none font-bold text-[#C9A24D] lining-nums tabular-nums 2xl:text-5xl">
+              <p className="font-number text-3xl leading-none font-bold text-[#C9A24D] lining-nums tabular-nums sm:text-4xl 2xl:text-5xl">
                 {s.value}
               </p>
-              <p className="mt-2 text-sm text-[#111111]/65">{s.label}</p>
+              <p className="mt-1.5 text-xs text-[#111111]/65 sm:mt-2 sm:text-sm">{s.label}</p>
             </li>
           ))}
         </ul>
@@ -70,7 +70,7 @@ export default function AboutSection() {
             About <span className="text-[#C9A24D] italic">Us</span>
           </h2>
 
-          <div className="mt-6 space-y-5 text-[15px] leading-relaxed text-[#111111]/75 sm:text-[16px] 2xl:text-lg">
+          <div className="mt-5 space-y-4 text-[14.5px] leading-relaxed text-[#111111]/75 sm:mt-6 sm:space-y-5 sm:text-[16px] 2xl:text-lg">
             <p>
               <strong className="text-[#111111]">InstallYourCareer</strong> is a Patna-based education
               consultancy helping students find the right path in{" "}

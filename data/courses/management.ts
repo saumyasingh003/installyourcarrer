@@ -8,7 +8,7 @@ export const management: Course = {
   accentWords: 2,
   intro:
     "Explore BBA, integrated and MBA programmes, understand entrance exams like CAT and MAT, and get guidance on the management path that fits your goals.",
-  image: { src: "/courses/management.jpg", alt: "Management students in a business discussion" },
+  image: { src: "/courses/v2/management.jpg", alt: "Young South Asian professionals discussing a presentation in a modern office", position: "object-[65%_50%]" },
   seo: {
     title: "Management Courses - BBA, MBA & Integrated BBA+MBA Admission",
     description:

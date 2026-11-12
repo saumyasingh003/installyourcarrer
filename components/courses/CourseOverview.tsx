@@ -6,7 +6,7 @@ export default function CourseOverview({ course }: { course: Course }) {
   const { overview } = course;
 
   return (
-    <section aria-labelledby="overview-title" id="overview" className="scroll-mt-36 bg-[#FFFFFF]">
+    <section aria-labelledby="overview-title" id="overview" className="scroll-mt-40 bg-[#FFFFFF]">
       <div className="mx-auto max-w-[1440px] px-6 py-20 sm:py-24 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">

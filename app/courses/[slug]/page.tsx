@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { COURSES, getCourse } from "@/data/courses";
 import { getUniversitiesForCourse } from "@/data/universities";
 import CourseHero from "@/components/courses/CourseHero";
-import CourseSectionNav from "@/components/courses/CourseSectionNav";
+import CourseTabs from "@/components/courses/CourseTabs";
 import ProgramList from "@/components/courses/ProgramList";
 import EligibilitySection from "@/components/courses/EligibilitySection";
 import EntranceExamSection from "@/components/courses/EntranceExamSection";
@@ -41,17 +41,26 @@ export default async function CoursePage({ params }: PageProps<"/courses/[slug]"
   return (
     <main className="w-full bg-[#F7F4EC]">
       <CourseHero course={course} />
-      <CourseSectionNav />
-      <ProgramList course={course} />
-      <EligibilitySection course={course} />
-      <EntranceExamSection course={course} />
-      <UniversitySection
-        courseName={course.name}
-        programs={course.programs.map((p) => p.name)}
-        entries={universities}
+      <CourseTabs
+        tabs={[
+          { id: "programs", label: "Explore Available Programs", content: <ProgramList course={course} /> },
+          { id: "eligibility", label: "Check Eligibility", content: <EligibilitySection course={course} /> },
+          { id: "exams", label: "Entrance Examinations", content: <EntranceExamSection course={course} /> },
+          {
+            id: "universities",
+            label: "Explore Partner Universities",
+            content: (
+              <UniversitySection
+                courseName={course.name}
+                programs={course.programs.map((p) => p.name)}
+                entries={universities}
+              />
+            ),
+          },
+          { id: "fees", label: "Fees & Scholarships", content: <FeesSection slug={course.slug} entries={universities} /> },
+          { id: "enquire", label: "Admission Enquiry", content: <CourseCTA course={course} /> },
+        ]}
       />
-      <FeesSection slug={course.slug} entries={universities} />
-      <CourseCTA course={course} />
     </main>
   );
 }

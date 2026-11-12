@@ -8,7 +8,7 @@ export const nursing: Course = {
   accentWords: 2,
   intro:
     "Explore nursing programmes, understand eligibility and entrance routes, and get guidance on starting a respected, in-demand career in patient care.",
-  image: { src: "/courses/nursing.jpg", alt: "Nursing student caring for a patient" },
+  image: { src: "/courses/v2/nursing-care.jpg", alt: "Nurse in blue scrubs helping an elderly man walk with a walker in a bright care home", position: "object-[30%_40%]" },
   seo: {
     title: "Nursing Courses - B.Sc Nursing, ANM & M.Sc Nursing Admission",
     description:

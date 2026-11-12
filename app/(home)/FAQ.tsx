@@ -28,20 +28,20 @@ const FAQS = [
 export default function FAQ() {
   return (
     <section className="w-full bg-[#F7F4EC]">
-      <div className="grid w-full gap-10 px-6 pt-20 pb-16 sm:px-8 sm:pt-28 sm:pb-20 lg:grid-cols-12 lg:gap-16 lg:px-12 2xl:px-20">
+      <div className="grid w-full gap-8 px-6 pt-12 pb-12 sm:gap-10 sm:px-8 sm:pt-28 sm:pb-20 lg:grid-cols-12 lg:gap-16 lg:px-12 2xl:px-20">
         {/* Heading column */}
         <div className="lg:col-span-4">
           <div className="lg:sticky lg:top-28">
-            <h2 className="font-display text-5xl leading-[0.95] tracking-tight text-[#111111] sm:text-6xl">
+            <h2 className="font-display text-[2.4rem] leading-[0.95] tracking-tight text-[#111111] sm:text-6xl">
               Frequently asked <em className="text-[#C9A24D]">questions</em>
             </h2>
-            <p className="mt-5 max-w-sm text-[15px] leading-relaxed text-[#111111]/65">
+            <p className="mt-4 max-w-sm text-sm leading-relaxed sm:mt-5 sm:text-[15px] text-[#111111]/65">
               Everything students and parents usually ask us. Can&apos;t find your answer? We&apos;re
               happy to help.
             </p>
             <Link
               href="/contact"
-              className="group mt-7 inline-flex items-center gap-2 rounded-full bg-[#111111] px-7 py-3 text-sm font-semibold text-[#F7F4EC] transition hover:bg-[#C9A24D] hover:text-[#111111]"
+              className="group mt-6 inline-flex items-center gap-2 rounded-full bg-[#111111] px-6 py-2.5 text-sm sm:mt-7 sm:px-7 sm:py-3 font-semibold text-[#F7F4EC] transition hover:bg-[#C9A24D] hover:text-[#111111]"
             >
               Ask a Question
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
@@ -55,18 +55,18 @@ export default function FAQ() {
             {FAQS.map((item, i) => (
               <li key={item.q} className="border-b border-[#C9A24D]/30">
                 <details name="faq" className="group">
-                  <summary className="flex cursor-pointer list-none items-center gap-4 py-6 sm:gap-5 sm:py-7 [&::-webkit-details-marker]:hidden">
-                    <span className="w-7 shrink-0 font-number text-sm font-bold tracking-wider text-[#C9A24D] lining-nums tabular-nums sm:w-8 sm:text-base">
+                  <summary className="flex cursor-pointer list-none items-center gap-3 py-4 sm:gap-5 sm:py-7 [&::-webkit-details-marker]:hidden">
+                    <span className="w-6 shrink-0 font-number text-xs font-bold tracking-wider text-[#C9A24D] lining-nums tabular-nums sm:w-8 sm:text-base">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="flex-1 font-display text-2xl leading-snug text-[#111111] transition-colors group-open:text-[#C9A24D] group-hover:text-[#C9A24D] sm:text-[1.9rem]">
+                    <span className="flex-1 font-display text-[1.3rem] leading-snug text-[#111111] transition-colors group-open:text-[#C9A24D] group-hover:text-[#C9A24D] sm:text-[1.9rem]">
                       {item.q}
                     </span>
                     <span className="relative flex size-8 shrink-0 items-center justify-center rounded-full border border-[#111111]/15 text-[#111111] transition-all duration-300 group-open:rotate-45 group-open:border-[#C9A24D] group-open:bg-[#C9A24D] group-open:text-[#FFFFFF] group-hover:border-[#C9A24D]">
                       <Plus className="size-4" strokeWidth={1.75} />
                     </span>
                   </summary>
-                  <p className="max-w-2xl pr-12 pb-7 pl-11 text-[15px] leading-relaxed text-[#111111]/65 sm:pl-[3.25rem] sm:text-base">
+                  <p className="max-w-2xl pr-4 pb-5 pl-9 text-sm leading-relaxed text-[#111111]/65 sm:pr-12 sm:pb-7 sm:pl-[3.25rem] sm:text-base">
                     {item.a}
                   </p>
                 </details>

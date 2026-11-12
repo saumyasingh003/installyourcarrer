@@ -8,7 +8,7 @@ export const physiotherapy: Course = {
   accentWords: 2,
   intro:
     "Help people recover strength, mobility and confidence. Explore physiotherapy programmes and get guidance on eligibility, entrance routes and admissions.",
-  image: { src: "/courses/physiotherapy.jpg", alt: "Physiotherapist helping a patient with an exercise" },
+  image: { src: "/courses/v2/physiotherapy.jpg", alt: "Physiotherapist treating a patient's neck in a clinic with anatomy charts", position: "object-[60%_50%]" },
   seo: {
     title: "Physiotherapy Courses - BPT, MPT Admission Guidance",
     description:

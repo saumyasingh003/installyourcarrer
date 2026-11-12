@@ -8,7 +8,7 @@ export const pharmacy: Course = {
   accentWords: 1,
   intro:
     "Discover pharmacy programmes from D.Pharm to M.Pharm, understand eligibility and entrance routes, and get guidance on building a career in pharmaceutical sciences.",
-  image: { src: "/courses/pharmacy.jpg", alt: "Pharmacy student working with medicines in a laboratory" },
+  image: { src: "/courses/v2/pharmacy.jpg", alt: "Pharmacist in a white coat checking a medicine bottle in front of pharmacy shelves", position: "object-[35%_50%]" },
   seo: {
     title: "Pharmacy Courses - B.Pharm, D.Pharm, Pharm.D & M.Pharm Admission",
     description:

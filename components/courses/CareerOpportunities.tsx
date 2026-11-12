@@ -3,7 +3,7 @@ import SectionHeading from "./SectionHeading";
 
 export default function CareerOpportunities({ course }: { course: Course }) {
   return (
-    <section aria-labelledby="careers-title" id="careers" className="scroll-mt-36 bg-[#F7F4EC]">
+    <section aria-labelledby="careers-title" id="careers" className="scroll-mt-40 bg-[#F7F4EC]">
       <div className="mx-auto max-w-[1440px] px-6 py-20 sm:py-24 lg:px-10">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">

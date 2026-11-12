@@ -22,8 +22,8 @@ export default function FeesSection({ slug, entries }: { slug: CourseSlug; entri
   );
 
   return (
-    <section aria-labelledby="fees-title" id="fees" className="scroll-mt-36 bg-[#FFFFFF]">
-      <div className="mx-auto max-w-[1440px] px-6 pt-12 pb-20 sm:pt-14 sm:pb-24 lg:px-10">
+    <section aria-labelledby="fees-title" id="fees" className="scroll-mt-40 bg-[#FFFFFF]">
+      <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-10 sm:pt-10 sm:pb-24 lg:px-10">
         <SectionHeading
           id="fees-title"
           num="05"
@@ -34,9 +34,9 @@ export default function FeesSection({ slug, entries }: { slug: CourseSlug; entri
         />
 
         {fees.length === 0 ? (
-          <div className="mt-12 grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <div className="mt-10 grid gap-14">
             {/* Indicative tuition ranges */}
-            <div className="lg:col-span-7">
+            <div>
               <div className="flex flex-wrap items-baseline justify-between gap-3">
                 <h3 className="font-display text-3xl text-[#111111]">Indicative annual tuition</h3>
                 <p className="text-xs font-bold tracking-[0.2em] text-[#C9A24D]">
@@ -69,9 +69,9 @@ export default function FeesSection({ slug, entries }: { slug: CourseSlug; entri
             </div>
 
             {/* Scholarships & funding */}
-            <div className="lg:col-span-5">
+            <div className="border-t border-[#C9A24D]/30 pt-12">
               <h3 className="font-display text-3xl text-[#111111]">Scholarships &amp; funding</h3>
-              <ul className="mt-6 space-y-6">
+              <ul className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {FUNDING_OPTIONS.map((f) => (
                   <li key={f.title} className="border-l-2 border-[#C9A24D] pl-5">
                     <p className="font-semibold text-[#111111]">

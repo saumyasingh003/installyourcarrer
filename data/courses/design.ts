@@ -8,7 +8,7 @@ export const design: Course = {
   accentWords: 1,
   intro:
     "From fashion and interiors to products and digital experiences, explore design programmes and get guidance on portfolios, entrance tests and admissions.",
-  image: { src: "/courses/design.jpg", alt: "Design student sketching ideas in a studio" },
+  image: { src: "/courses/v2/design.jpg", alt: "Two fashion design students working with fabric in a sunlit studio", position: "object-[70%_50%]" },
   seo: {
     title: "Design Courses - B.Des, M.Des, Fashion & Interior Design Admission Guidance",
     description:

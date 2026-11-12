@@ -8,7 +8,7 @@ export const medical: Course = {
   accentWords: 1,
   intro:
     "Explore medical education opportunities, discover the right course and receive professional guidance throughout your admission journey.",
-  image: { src: "/courses/medical.jpg", alt: "Surgical team in masks looking down under operating theatre lights" },
+  image: { src: "/courses/v2/medical.jpg", alt: "South Asian medical students in white coats practising a blood-pressure check", position: "object-[60%_50%]" },
   seo: {
     title: "Medical Courses - MBBS, BDS, BAMS, BHMS Admission Guidance",
     description:

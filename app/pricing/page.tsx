@@ -66,10 +66,10 @@ export default function PricingPage() {
       <section className="relative overflow-hidden">
         <div className="pointer-events-none absolute -top-40 -right-40 size-[520px] rounded-full bg-[#C9A24D]/10 blur-3xl" />
         <div className="relative mx-auto max-w-[1440px] px-6 pt-8 pb-12 lg:px-10">
-          <h1 className="text-4xl font-extrabold tracking-tight text-[#111111]">
+          <h1 className="text-[2rem] font-extrabold tracking-tight sm:text-4xl text-[#111111]">
             Guidance &amp; <span className="text-[#C9A24D]">Pricing</span>
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-[#111111]/70">
+          <p className="mt-3 max-w-2xl text-[15px] sm:mt-4 sm:text-lg text-[#111111]/70">
             Simple guidance plans for every student, plus a clear view of course fees before you decide.
           </p>
         </div>
@@ -77,11 +77,11 @@ export default function PricingPage() {
 
       {/* Guidance plans */}
       <section aria-label="Guidance plans" className="mx-auto max-w-[1440px] px-6 pb-20 lg:px-10">
-        <ul className="mt-6 grid items-stretch gap-6 lg:grid-cols-3">
+        <ul className="-mx-3 mt-6 grid items-stretch gap-6 sm:mx-0 lg:grid-cols-3">
           {PLANS.map((plan) => (
             <li
               key={plan.name}
-              className={`relative flex flex-col rounded-3xl p-8 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-9 ${
+              className={`relative flex flex-col rounded-3xl px-6 py-7 transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-9 ${
                 plan.popular
                   ? "bg-[#111111] text-[#F7F4EC] shadow-xl ring-1 ring-[#C9A24D] lg:-my-4 lg:py-12"
                   : "bg-[#FFFFFF] text-[#111111] shadow-sm ring-1 ring-[#C9A24D]/20"
@@ -140,11 +140,11 @@ export default function PricingPage() {
           Indicative annual tuition at private universities for {FEE_GUIDE_YEAR}. Actual fees vary by university,
           programme and year.
         </p>
-        <ul className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <ul className="-mx-3 grid gap-5 sm:mx-0 md:grid-cols-2 xl:grid-cols-3">
           {COURSES.map((course, i) => (
             <li
               key={course.slug}
-              className="group flex flex-col rounded-3xl bg-[#FFFFFF] p-7 shadow-sm ring-1 ring-[#C9A24D]/15 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-[#C9A24D]/60"
+              className="group flex flex-col rounded-3xl bg-[#FFFFFF] px-5 py-6 sm:p-7 shadow-sm ring-1 ring-[#C9A24D]/15 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-[#C9A24D]/60"
             >
               <div className="flex items-baseline justify-between gap-4">
                 <h2 className="font-display text-4xl leading-none text-[#111111]">{course.name}</h2>

@@ -53,14 +53,14 @@ export default function ContactPage() {
   return (
     <main className="w-full bg-[#F7F4EC]">
       <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-16 lg:px-10">
-        <h1 className="text-4xl font-extrabold tracking-tight text-[#111111]">
+        <h1 className="text-[2rem] font-extrabold tracking-tight sm:text-4xl text-[#111111]">
           Contact <span className="text-[#C9A24D]">Us</span>
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-[#111111]/70">
+        <p className="mt-3 max-w-2xl text-[15px] sm:mt-4 sm:text-lg text-[#111111]/70">
           Have a question? Our career counsellors are here to help.
         </p>
 
-        <div className="mt-8 grid gap-8 lg:grid-cols-[2fr_3fr]">
+        <div className="mt-6 grid gap-6 sm:mt-8 sm:gap-8 lg:grid-cols-[2fr_3fr]">
           {/* Info cards */}
           <div className="space-y-4 sm:space-y-6">
             <InfoCard number="01" icon={Building2} title="Office">

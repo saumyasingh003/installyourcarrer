@@ -8,7 +8,7 @@ export const engineering: Course = {
   accentWords: 1,
   intro:
     "Compare engineering branches, understand entrance routes and get guidance on choosing the right B.Tech, diploma or M.Tech programme for your interests.",
-  image: { src: "/courses/engineering.jpg", alt: "Engineering students working on a technical project" },
+  image: { src: "/courses/v2/engineering.jpg", alt: "Three engineering students in safety goggles building a robot at a lab workbench" },
   seo: {
     title: "Engineering Courses - B.Tech, Diploma & M.Tech Admission Guidance",
     description:

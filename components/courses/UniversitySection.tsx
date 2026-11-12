@@ -47,19 +47,31 @@ const SHOWCASE = [
     title: "Modern City Campus",
     image: "/campuses/campus-modern.jpg",
     alt: "Modern glass university building with a landscaped courtyard",
-    facilities: "Smart classrooms · Labs · Library · Placement cell",
   },
   {
     title: "Heritage Campus",
     image: "/campuses/campus-heritage.jpg",
     alt: "Classic red-brick university building with columns and a green lawn",
-    facilities: "Central library · Research labs · Sports facilities",
   },
   {
     title: "Green Campus",
     image: "/campuses/campus-green.jpg",
     alt: "University building behind a wide green lawn",
-    facilities: "Spacious grounds · Labs · Auditorium · Cafeteria",
+  },
+  {
+    title: "Classic Brick Campus",
+    image: "/campuses/campus-brick.jpg",
+    alt: "Red-brick university building among tall trees and walking paths",
+  },
+  {
+    title: "Urban Campus",
+    image: "/campuses/campus-urban.jpg",
+    alt: "Modern multi-storey academic building with landscaped grounds",
+  },
+  {
+    title: "Vibrant Campus Life",
+    image: "/campuses/campus-life.jpg",
+    alt: "Cheerful students together outside a modern glass campus building",
   },
 ];
 
@@ -96,8 +108,8 @@ export default function UniversitySection({
   );
 
   return (
-    <section aria-labelledby="universities-title" id="universities" className="scroll-mt-36 bg-[#F7F4EC]">
-      <div className="mx-auto max-w-[1440px] px-6 pt-12 pb-20 sm:pt-14 sm:pb-24 lg:px-10">
+    <section aria-labelledby="universities-title" id="universities" className="scroll-mt-40 bg-[#F7F4EC]">
+      <div className="mx-auto max-w-[1440px] px-6 pt-8 pb-10 sm:pt-10 sm:pb-24 lg:px-10">
         <SectionHeading
           id="universities-title"
           num="04"
@@ -110,13 +122,13 @@ export default function UniversitySection({
         {entries.length === 0 ? (
           <>
           {/* Showcase cards until verified partner data is added - no invented names */}
-          <ul className="mt-12 grid gap-6 md:grid-cols-3">
+          <ul className="-mx-5 mt-8 grid gap-5 sm:mx-0 sm:mt-12 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
             {SHOWCASE.map((s, i) => (
               <li
                 key={s.title}
                 className="group flex flex-col overflow-hidden rounded-3xl bg-[#FFFFFF] shadow-sm ring-1 ring-[#C9A24D]/15 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:ring-[#C9A24D]/60"
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-[16/10] overflow-hidden">
                   <Image
                     src={s.image}
                     alt={s.alt}
@@ -128,46 +140,37 @@ export default function UniversitySection({
                     NAAC A++
                   </span>
                 </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <p className="text-xs font-bold tracking-[0.2em] text-[#C9A24D]">
-                    PARTNER UNIVERSITY {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="mt-2 font-display text-3xl leading-tight text-[#111111]">{s.title}</h3>
+                <div className="flex flex-1 flex-col px-5 py-5 sm:p-6">
+                  <h3 className="font-display text-3xl leading-tight text-[#111111]">{s.title}</h3>
                   <p className="mt-1 flex items-center gap-1.5 text-sm text-[#111111]/55">
                     <MapPin className="size-4 text-[#C9A24D]" />
                     Name &amp; location shared on enquiry
                   </p>
-                  <ul className="mt-4 flex flex-wrap gap-2">
-                    {programs.slice(i, i + 2).map((p) => (
-                      <li key={p} className="rounded-full border border-[#C9A24D]/40 px-3 py-1 text-xs text-[#111111]">
-                        {p}
-                      </li>
-                    ))}
-                  </ul>
-                  <p className="mt-4 text-sm leading-relaxed text-[#111111]/60">{s.facilities}</p>
-                  <a
-                    href="#enquire"
-                    onClick={() =>
-                      programs[i] &&
-                      window.dispatchEvent(new CustomEvent<string>(PROGRAM_EVENT, { detail: programs[i] }))
-                    }
-                    className="mt-auto inline-flex items-center gap-1.5 self-start pt-6 text-sm font-semibold text-[#111111] transition-colors hover:text-[#C9A24D]"
-                  >
-                    Get university details
-                    <ArrowUpRight className="size-4" />
-                  </a>
+                  <div className="mt-auto pt-6">
+                    <a
+                      href="#enquire"
+                      onClick={() =>
+                        programs[i] &&
+                        window.dispatchEvent(new CustomEvent<string>(PROGRAM_EVENT, { detail: programs[i] }))
+                      }
+                      className="group/btn flex w-full items-center justify-center gap-2 rounded-full bg-[#111111] px-5 py-3 text-sm font-semibold text-[#F7F4EC] transition-colors hover:bg-[#C9A24D] hover:text-[#111111]"
+                    >
+                      Get university details
+                      <ArrowUpRight className="size-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                    </a>
+                  </div>
                 </div>
               </li>
             ))}
           </ul>
-          <div className="mt-8 flex flex-col items-start justify-between gap-6 rounded-tl-[3rem] rounded-tr-lg rounded-br-[3rem] rounded-bl-lg bg-[#FFFFFF] p-8 shadow-sm sm:flex-row sm:items-center sm:p-10">
+          <div className="-mx-5 mt-8 flex flex-col items-start justify-between gap-5 rounded-tl-[2rem] sm:gap-6 sm:rounded-tl-[3rem] rounded-tr-lg rounded-br-[2rem] rounded-bl-lg bg-[#FFFFFF] px-5 py-6 sm:rounded-br-[3rem] shadow-sm sm:mx-0 sm:flex-row sm:items-center sm:p-10">
             <div className="flex gap-5">
-              <Building2 className="mt-1 size-7 shrink-0 text-[#C9A24D]" strokeWidth={1.5} />
+              <Building2 className="mt-1 hidden size-7 shrink-0 text-[#C9A24D] sm:block" strokeWidth={1.5} />
               <div>
-                <p className="font-display text-3xl leading-tight text-[#111111]">
+                <p className="font-display text-[1.6rem] leading-tight text-[#111111] sm:text-3xl">
                   Contact our admission team to explore available university options.
                 </p>
-                <p className="mt-2 max-w-xl text-[15px] text-[#111111]/60">
+                <p className="mt-2 max-w-xl text-sm text-[#111111]/60 sm:text-[15px]">
                   We&apos;ll share partner universities offering {courseName.toLowerCase()} programmes that match your
                   eligibility, budget and preferred location.
                 </p>
@@ -175,7 +178,7 @@ export default function UniversitySection({
             </div>
             <a
               href="#enquire"
-              className="group inline-flex shrink-0 items-center gap-2 rounded-full bg-[#111111] px-7 py-3 text-sm font-semibold text-[#F7F4EC] transition hover:bg-[#C9A24D] hover:text-[#111111]"
+              className="group flex w-full shrink-0 items-center justify-center gap-2 rounded-full bg-[#111111] px-7 py-3 text-sm font-semibold text-[#F7F4EC] transition hover:bg-[#C9A24D] hover:text-[#111111] sm:inline-flex sm:w-auto"
             >
               Ask about universities
               <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
